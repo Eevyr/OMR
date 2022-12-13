@@ -11,7 +11,7 @@ Our goal, in this project, is to be able to play a pictured music sheet through 
 ## Monophonic Music Player and translator
 ### Semantic Recognition
 
-1. Download this code, and go to the project folder under a command line window. Make sure your path is like this:
+1. Download [this code](https://www.dropbox.com/sh/smd8r66pxcegvt3/AAB3vFl77J3Scu791mZsAMuIa?dl=0), and go to the project folder under a command line window. Make sure your path is like this:
 
 ```
 monophonic % 
