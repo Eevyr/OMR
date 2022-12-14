@@ -1,7 +1,7 @@
 # Final Report of group 21
 ##### BON Chloe, LEE Yi-Hsuan
 
-Our goal, in this project, is to be able to play a pictured music sheet through a computer and turn it into MIDI file which allows user to edit after.
+Our goal in this project is to be able to play a pictured music sheet through a computer and turn it into MIDI file which allows user to edit after.
 
 
 ## MIDI File Generator
@@ -11,7 +11,11 @@ Our goal, in this project, is to be able to play a pictured music sheet through 
 ## Monophonic Music Player and translator
 ### Semantic Recognition
 
-1. Download [this code](https://www.dropbox.com/sh/smd8r66pxcegvt3/AAB3vFl77J3Scu791mZsAMuIa?dl=0), and go to the project folder under a command line window. Make sure your path is like this:
+1. Download monophonic code:
+  * you can download everything from [this folder](https://www.dropbox.com/sh/smd8r66pxcegvt3/AAB3vFl77J3Scu791mZsAMuIa?dl=0)
+  * or you can also clone the `monophonic` repo, and add the [Semantic-Model](https://www.dropbox.com/sh/senkb6uoogx46fu/AABIT3ZVaxw-5EzpE3_-XPUTa?dl=0) folder in 
+
+, and go to the project folder under a command line window. Make sure your path is like this:
 
 ```
 monophonic % 
