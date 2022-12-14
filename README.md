@@ -6,7 +6,26 @@ Our goal in this project is to be able to play a pictured music sheet through a 
 
 ## MIDI File Generator
 
+1. once the repository cloned, compile midiconstructor.c and run a.out :
 
+```
+gcc midiconstructor.c
+./a.out 
+```
+
+2. the corresponding midi file of your code has been created under the name of output.mid
+
+3. If you want to change some of the content : you can modify the ecrire_piste2 function in midiconstructor.c.
+
+To modify the instrument that will be played :
+you have to play with the number in the argument of the function MIDI_Program_Change(fichier, 0, NUMBER_FOR_INSTRUMENT).
+Here are some example of instruments : 0 to 7 represents pianos, 40 to 47 represents strings, and 80 to 103 synthesizers.
+
+To modify the notes :
+It is the inout of Note_unique_avec_duree(fichier, CHANNEL, MIDI_NOTE, VELOCITY, DURATION) that you need to modify.
+The midi note can take values from 0 to 127 (Do2 to Sol8), and you can find on wikipedia conversion for notes to numbers for midi file.
+
+You can add other loops are free notes in sequence inside this function ecrire_piste2 or you can also add another track (which would be called ecrire_piste3 to be played in parallel (create a polyphonic music !)).
 
 ## Monophonic Music Player and translator
 ### Semantic Recognition
