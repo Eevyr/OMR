@@ -58,7 +58,7 @@ Using pretrained models :
 
 Trying to retrain from scratch (warning : doesn't work completely):
 
-1. Clone the polyphonic repo;
+1. Clone the polyphonic repository;
 2. Dataset of png files and their corresponding labels in an organized folder can be download at [this adress](https://www.dropbox.com/s/sh26wabvcsaf4zn/Dataset.zip?dl=0).
 Unzip it and put it in the polyphonic repository.
 3. Once in the experiment_code folder, for the baseline decoder, run the command :
