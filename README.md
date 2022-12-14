@@ -7,14 +7,11 @@ Our goal in this project is to be able to play a pictured music sheet through a 
 ## MIDI File Generator
 
 1. once the repository cloned, compile midiconstructor.c and run a.out :
-
-```
+```bash
 gcc midiconstructor.c
 ./a.out 
 ```
-
 2. the corresponding midi file of your code has been created under the name of output.mid
-
 3. If you want to change some of the content : you can modify the ecrire_piste2 function in midiconstructor.c.
 
 To modify the instrument that will be played :
@@ -55,6 +52,29 @@ python3 ctc_predict.py -model Semantic-Model/semantic_model.meta -vocabulary Dat
 
 ## Polyphonic Music Player 
 
+Using pretrained models :
+
+1. Use the colab notebook to output your xml file.
+
+Trying to retrain from scratch (warning : doesn't work completely):
+
+1. Clone the polyphonic repo;
+2. Dataset of png files and their corresponding labels in an organized folder can be download at [this adress](https://www.dropbox.com/s/sh26wabvcsaf4zn/Dataset.zip?dl=0).
+Unzip it and put it in the polyphonic repository.
+3. Once in the experiment_code folder, for the baseline decoder, run the command :
+```bash
+python train.py -voc_p vocab/baseline_pitch.txt -voc_r vocab/baseline_rythm.txt -corpus ../Dataset
+```
+For the FlagDecoder : 
+```bash
+python train_flag_accidental.py -voc_s <path to symbol vocabulary> -voc_d <path to duration vocabulary> -voc_a <path to alter vocabulary> -corpus <path to corpus>
+```
+And for the RNNDecoder :
+```
+python train_multi.py -voc_p <path to pitch vocabulary> -voc_r <path to rhythm vocabulary> -corpus <path to corpus>
+```
+
+Once the models trained, you can test them with the same command lines as in the colab notebook but the models/baseline.pt etc... (pre-trained models), has to be replaced by the path to the new generated model.
 
 ## Citation
 This repository was used for the experiments reported in the paper:
