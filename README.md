@@ -54,7 +54,25 @@ python3 ctc_predict.py -model Semantic-Model/semantic_model.meta -vocabulary Dat
 
 Using pretrained models :
 
-1. Use the colab notebook to output your xml file.
+1. download these pre-trained models with [this link](https://drive.google.com/drive/folders/1OVPg_oSsb1X9YaXI5mB7nxhO1WQx53u9?usp=sharing);
+
+2. Put them in your experiment_code directory;
+
+3. Run the commands :
+for baseline decoder :
+```bash
+python predict.py -voc_p vocab/baseline_pitch.txt -voc_r vocab/baseline_rythm.txt -model baseline.pt -image <your path to directory of images> -out output
+```
+for flagdecoder :
+```bash
+python predict_flag.py -voc_d <path to duration vocabulary> -voc_s <path to symbol vocabulary> -voc_a <path to alter vocabulary> -model <path to trained model> -images <path to image directory to predict> -out_p <output path for pitch predictions> -out_r <output path for rhythm predictions>
+```
+for RNNDecoder :
+```bash
+python predict_multi.py -voc_p <path to pitch vocab> -voc_r <path to rhythm vocab> -model <path to trained model> -images <path to directory of images to predict> -out <directory to output predictions>
+```
+
+4. There is chances that your graphic card will not handle the execution so an option still is colab.
 
 Trying to retrain from scratch (warning : doesn't work completely):
 
